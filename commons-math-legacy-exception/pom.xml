@@ -60,32 +60,32 @@
             Very flaky tests can be moved to a separate execution. -->
           <rerunFailingTestsCount>5</rerunFailingTestsCount>
         </configuration>
-        <executions>
-          <execution>
-            <!-- This uses the default ID to exclude the flaky tests -->
-            <id>default-test</id>
-            <configuration>
-              <excludes>
-                <exclude>**/SimplexOptimizer*Test</exclude>
-              </excludes>
-            </configuration>
-          </execution>
-          <execution>
-            <!-- Add a second exceution of the flaky tests -->
-            <id>flaky-tests</id>
-            <phase>test</phase>
-            <goals>
-              <goal>test</goal>
-            </goals>
-            <configuration>
-              <rerunFailingTestsCount>14</rerunFailingTestsCount>
-              <printSummary>false</printSummary>
-              <includes>
-                <include>**/SimplexOptimizer*Test</include>
-              </includes>
-            </configuration>
-          </execution>
-        </executions>
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            &lt;!&ndash; This uses the default ID to exclude the flaky tests &ndash;&gt;-->
+<!--            <id>default-test</id>-->
+<!--            <configuration>-->
+<!--              <excludes>-->
+<!--                <exclude>**/SimplexOptimizer*Test</exclude>-->
+<!--              </excludes>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--          <execution>-->
+<!--            &lt;!&ndash; Add a second exceution of the flaky tests &ndash;&gt;-->
+<!--            <id>flaky-tests</id>-->
+<!--            <phase>test</phase>-->
+<!--            <goals>-->
+<!--              <goal>test</goal>-->
+<!--            </goals>-->
+<!--            <configuration>-->
+<!--              <rerunFailingTestsCount>14</rerunFailingTestsCount>-->
+<!--              <printSummary>false</printSummary>-->
+<!--              <includes>-->
+<!--                <include>**/SimplexOptimizer*Test</include>-->
+<!--              </includes>-->
+<!--            </configuration>-->
+<!--          </execution>-->
+<!--        </executions>-->
       </plugin>
     </plugins>
   </build>
